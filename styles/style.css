@@ -33,6 +33,10 @@ body {
   color: #105652;
 }
 
+.first-section #spent {
+  color: #bb6464;
+}
+
 .first-section .budget .number {
   color: #ff5959;
 }
@@ -85,6 +89,28 @@ body {
   margin: 3% auto;
 }
 
+.product-buttons .subtract,
+.product-buttons .add {
+  background: #194350;
+  color: #fff;
+}
+
+.clear {
+  background: #194350;
+  color: #fff;
+  transition: background 0.3s ease;
+}
+
+.product .clear {
+  background: #f8a488;
+  color: #fff;
+  transition: background 0.3s ease;
+}
+
+.product .clear:hover {
+  background: #f8855e;
+}
+
 .product-buttons .display {
   margin: 3% 1%;
   border: 1px solid grey;
@@ -116,6 +142,13 @@ body {
 
 .receipt-section .receipt-product {
   margin: 3%;
+}
+
+/* GENERAL CLASSES */
+
+.btn:hover {
+  color: #fff;
+  background: #112f33;
 }
 
 /* MEDIA QUERIES */
@@ -160,6 +193,11 @@ body {
   .receipt-section h3,
   .price-tag {
     font-size: 1rem;
+    margin: 3rem;
+  }
+
+  .receipt-section h3 {
+    line-height: 2;
   }
 
   .receipt .price-tag {
@@ -171,8 +209,8 @@ body {
   }
 
   .receipt .footer-txt {
-    padding: 0.7rem;
-    font-size: 1rem;
+    padding: 0.5rem;
+    font-size: 0.9rem;
   }
 }
 

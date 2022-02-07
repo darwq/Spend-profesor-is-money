@@ -222,6 +222,20 @@ function clearReceipt() {
   });
 }
 
+function spentAll() {
+  if (sum < 1000) {
+    budget.textContent = "You spend the entire amount of money. Good job.";
+
+    budget.setAttribute("id", "spent");
+
+    document.querySelector(".budget .amount").textContent = "";
+
+    return;
+  }
+
+  budget.setAttribute("id", "dasd");
+}
+
 products.forEach((product) => {
   productId++;
   product.setAttribute("id", `id-${productId}`);
@@ -229,6 +243,8 @@ products.forEach((product) => {
 
   btn.setAttribute("class", "btn btn-primary clear-element");
   btn.textContent = "clear";
+  btn.classList.remove("btn-primary");
+  btn.classList.add("clear");
 
   product.appendChild(btn);
 });
@@ -248,6 +264,7 @@ productImage.forEach((image) => {
 });
 
 btnAdd.forEach((btn) => {
+  btn.classList.remove("btn-primary");
   btn.addEventListener("click", (e) => {
     if (
       sum >=
@@ -280,11 +297,14 @@ btnAdd.forEach((btn) => {
       appendToReceipt(e);
 
       showPayAmount();
+
+      spentAll();
     }
   });
 });
 
 btnSubtract.forEach((btn) => {
+  btn.classList.remove("btn-primary");
   btn.addEventListener("click", (e) => {
     let displayContent = document.querySelector(
       `#${e.target.parentElement.parentElement.getAttribute(
@@ -309,6 +329,8 @@ btnSubtract.forEach((btn) => {
       appendToReceipt(e);
 
       showPayAmount();
+
+      spentAll();
     }
   });
 });
