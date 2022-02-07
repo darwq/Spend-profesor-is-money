@@ -341,6 +341,8 @@ clearButton.addEventListener("click", (e) => {
   clearReceipt();
 
   showPayAmount();
+
+  spentAll();
 });
 
 document.querySelectorAll(".clear-element").forEach((element) => {
@@ -350,5 +352,7 @@ document.querySelectorAll(".clear-element").forEach((element) => {
     clearToReceipt(e);
 
     showPayAmount();
+
+    spentAll();
   });
 });
