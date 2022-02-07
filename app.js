@@ -152,8 +152,8 @@ function appendToReceipt(e) {
     let child = document.querySelector(".receipt-section h3");
 
     receiptProducts[receiptTitles.indexOf(title.textContent)].textContent = "";
-    child.textContent =
-      "Your cart is empty. Buy something and it will be shown here.";
+
+    checkForEmptyReceipt();
   }
 }
 
@@ -164,6 +164,10 @@ function clearToReceipt(e) {
 
   receiptProducts[receiptTitles.indexOf(title.textContent)].textContent = "";
 
+  checkForEmptyReceipt();
+}
+
+function checkForEmptyReceipt() {
   let count = 0;
 
   receiptProducts.forEach((product) => {
