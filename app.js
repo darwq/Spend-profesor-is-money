@@ -163,9 +163,20 @@ function clearToReceipt(e) {
   );
 
   receiptProducts[receiptTitles.indexOf(title.textContent)].textContent = "";
-  let child = document.querySelector(".receipt-section h3");
-  child.textContent =
-    "Your cart is empty. Buy something and it will be shown here.";
+
+  let count = 0;
+
+  receiptProducts.forEach((product) => {
+    if (product.textContent.length > 0) {
+      count++;
+    }
+  });
+
+  if (count == 0) {
+    let child = document.querySelector(".receipt-section h3");
+    child.textContent =
+      "Your cart is empty. Buy something and it will be shown here.";
+  }
 }
 
 function showPayAmount() {
