@@ -185,4 +185,9 @@ body {
     grid-template-columns: 1fr;
     grid-gap: 1rem;
   }
+
+  .products .product-image {
+    width: 225px;
+    height: 150px;
+  }
 }
