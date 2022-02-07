@@ -1,0 +1,188 @@
+*,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins";
+}
+
+.first-section {
+  padding: 3% 7%;
+  text-align: center;
+  border-bottom: 10px solid #6b1f20;
+  width: 100%;
+}
+
+.first-section .el-image {
+  width: 250px;
+  height: 250px;
+  margin: 7%;
+  user-select: none;
+}
+
+.first-section .header {
+  margin-bottom: 3%;
+}
+
+.first-section .description {
+  font-size: 1.2rem;
+  line-height: 2;
+}
+
+.first-section .budget {
+  margin: 3% 0 0 0;
+  color: #105652;
+}
+
+.first-section .budget .number {
+  color: #ff5959;
+}
+
+.clear {
+  margin: 2rem;
+}
+
+.clear-element {
+  display: block;
+  margin: 0 auto;
+}
+
+/* PRODUCTS SECTION */
+
+.products {
+  padding: 3% 7%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 3.5rem;
+  grid-template-rows: auto;
+}
+
+.products .product-image {
+  max-width: 400px;
+  max-height: 200px;
+  margin: 0 auto;
+  display: block;
+  border: 6px solid #f5eedc;
+}
+
+.products .title {
+  text-align: center;
+  margin: 3%;
+}
+
+.products .price {
+  text-align: center;
+}
+
+.products .product-buttons {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.product-buttons .btn {
+  width: 15%;
+  text-align: center;
+  margin: 3% auto;
+}
+
+.product-buttons .display {
+  margin: 3% 1%;
+  border: 1px solid grey;
+  width: 50%;
+  height: 50%;
+  text-align: center;
+}
+
+/* RECEIPT SECTION */
+
+.receipt {
+  padding: 3% 7%;
+  text-align: center;
+}
+
+.receipt .receipt-section {
+  margin: 5%;
+}
+
+.receipt .footer-txt {
+  border: 3px solid #ff6464;
+  display: inline;
+  padding: 1rem;
+}
+
+.receipt .price-tag {
+  margin: 3%;
+}
+
+.receipt-section .receipt-product {
+  margin: 3%;
+}
+
+/* MEDIA QUERIES */
+
+@media only screen and (min-width: 750px) and (max-width: 1500px) {
+  .product {
+    margin-top: 2rem;
+  }
+
+  .products {
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 2rem;
+  }
+}
+
+@media only screen and (min-width: 500px) and (max-width: 750px) {
+  .first-section .description {
+    font-size: 1rem;
+  }
+
+  .first-section .budget {
+    margin: 3%;
+  }
+
+  .first-section .description {
+    margin: 7%;
+  }
+
+  .product {
+    margin-top: 2rem;
+  }
+
+  .products {
+    grid-template-columns: 1fr;
+    grid-gap: 1.5rem;
+  }
+
+  .receipt h3 {
+    font-size: 1.3rem;
+  }
+
+  .receipt-section h3,
+  .price-tag {
+    font-size: 1rem;
+  }
+
+  .receipt .price-tag {
+    padding-bottom: 1rem;
+  }
+
+  .receipt .receipt-product {
+    font-size: 1.1rem;
+  }
+
+  .receipt .footer-txt {
+    padding: 0.7rem;
+    font-size: 1rem;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .product:nth-child(1) {
+    margin-top: 3rem;
+  }
+
+  .products {
+    grid-template-columns: 1fr;
+    grid-gap: 1rem;
+  }
+}
